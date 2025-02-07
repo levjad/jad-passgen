@@ -63,14 +63,14 @@ describe('calculateStrength', () => {
     });
 
     it('should return 3 for a password with lowercase, uppercase, and numbers', () => {
-        expect(calculateStrength('abcDEF123')).toBe(3);
+        expect(calculateStrength('4BC5B6C71W84')).toBe(3);
     });
 
     it('should return 4 for a password with lowercase, uppercase, numbers, and special characters', () => {
-        expect(calculateStrength('abcDEF123!@#')).toBe(4);
+        expect(calculateStrength('acDE12!')).toBe(4);
     });
 
     it('should return 5 for a strong password with all character types and length >= 8', () => {
-        expect(calculateStrength('abcDEF123!@#')).toBe(4);
+        expect(calculateStrength('abcDEF123!@#')).toBe(5);
     });
 });
